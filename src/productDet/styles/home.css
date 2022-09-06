@@ -1,0 +1,114 @@
+.product-info{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1rem;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    overflow: hidden;
+}
+.product__section {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    gap: 1.5rem;
+    align-items: center;
+}
+.product-info__img {
+    height: auto;
+    margin: 50px auto 0;
+    overflow: scroll;
+    border: 1px solid grey;
+
+    animation: see 30s infinite alternate ease-in-out; 
+}
+.product-info__img ul {
+    display: flex;
+    padding: 0;
+    width: 100%;
+}
+.product-info__img li {
+    list-style: none;
+    width: 100%;
+}
+.product-info__img img{
+    width: 100%;
+}
+
+.product-info__name {
+    color: brown;
+    font-size: 1.5rem;
+    padding-top: 1rem;
+}
+.product-info__description{
+    padding: 1rem 0;
+    text-align: justify;
+}
+.product-info__body{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3rem;
+}
+.product-info__quantity-product {
+    display: flex;
+    justify-content: space-evenly;
+}
+.product-info__price-label,
+.product-info__quantity-label {
+    color: brown;
+    font-weight: bold;
+    font-size: 1rem;
+}
+.product-info__price-value {
+    color: darkslategrey;
+    padding-top: .4rem;
+    font-weight: bold;
+    font-size: .8rem;
+}
+.product-info__quantity-product {
+    padding-top: .2rem;
+}
+.product__btn {
+    border: none;
+    color: antiquewhite;
+    background-color: brown;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 0 .2rem ;
+}
+.btn__cart {
+    border: none;
+    color: antiquewhite;
+    background-color: brown;
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 0 .2rem ;
+    border-radius: 5px;
+    padding: 10px;
+}
+  /* @keyframes see {
+    0% {margin-left: 0%;}
+    20% {margin-left: 0%;}
+
+    25% {margin-left: -100%;}
+    45% {margin-left: -100%;}
+
+    50% {margin-left: -200%;}
+    70% {margin-left: -200%;}
+
+    
+}  */
+
+@media (min-width: 750px){
+    .product__section {
+        flex-direction: row;
+    }
+    .product-info {
+        align-items: flex-end;
+    }
+    .product-info__data{
+        width: 100%;
+    }
+}

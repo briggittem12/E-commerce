@@ -1,5 +1,97 @@
-.active-link{
-  background-color: red;
-  color: white;
-  font-size: 20px;
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+img {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+h1, h2, h3, h4, p {
+  margin: 0;
+}
+.home {
+  display: flex;
+  flex-direction: column;
+}
+.home__container-card {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  padding: 1rem;
+  justify-content: center;
+}
+
+.card-home {
+  border: 1px solid rgb(110, 110, 110);
+  overflow: hidden;
+  padding: 1rem;
+  width: 100%;
+  justify-content: center;
+}
+ .card-home .card-home__header {
+    align-items: center;
+    display: flex;
+    height: 250px;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+}
+.card-home .card-home__header img {
+    display: block;
+    margin: 0 auto;
+    object-fit: contain;
+}
+
+.card-home .card-home__header .second__img {
+  background: rgb(175, 146, 146);
+  opacity: 0;
+  position: absolute;
+  transition: transform .8s;
+} 
+
+.card-home__body {
+  padding-top: 1rem;
+}
+.card-home__name {
+  color: brown;
+  font-size: 1rem;
+}
+.card-home__price {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+.card-home__price-label {
+  color: darksalmon;
+  padding-top: .4rem;
+  font-weight: bold;
+  font-size: .8rem;
+}
+.card-home__price-value {
+  color: darkslategrey;
+  padding-top: .4rem;
+  font-weight: bold;
+  font-size: .8rem;
+}
+.card-home__btn {
+  display: flex;
+  justify-content: flex-end;
+}
+.home__btn {
+  border: none;
+  border-radius: 50%;
+  color: antiquewhite;
+  background-color: brown;
+  aspect-ratio: 1;
+  font-size: 1rem;
+  text-align: center;
+  cursor: pointer;
+}
+@media (min-width: 750px){
+  .card-home {
+    width: 25%;
+  }
 }

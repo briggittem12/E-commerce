@@ -60,14 +60,13 @@ const Home = () => {
         searchProduct={searchProduct}
         />
       </aside>
-
-      <div className="home__container-card">
         <div className='home__search'>
             <Search
             setFilterCategory={setFilterCategory}
             searchProduct={searchProduct}
             />
         </div>
+      <div className="home__container-card">
         {
           products?.map(product => (
             <CardHome

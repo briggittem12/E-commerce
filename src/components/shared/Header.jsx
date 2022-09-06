@@ -1,5 +1,6 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
+import './styles/header.css'
 
 const Header = () => {
   return (
@@ -9,9 +10,9 @@ const Header = () => {
       </NavLink>
       <nav className="header__nav">
         <ul className="header__list">
-          <li className="header__item"><NavLink to='/login' className={({isActive})=> isActive ? 'active-link' : ''}>Login</NavLink></li>
-          <li className="header__item"><NavLink to='/purchase' className={({isActive})=> isActive ? 'active-link' : ''}>Purchase</NavLink></li>
-          <li className="header__item"><NavLink to=''/><h2 className="header__link">Cart</h2></li>
+          <li className="header__item"><NavLink to='/login' className={({isActive})=> isActive ? 'active-link' : ''}><i className="fa-solid fa-user"></i></NavLink></li>
+          <li className="header__item"><NavLink to='/purchase' className={({isActive})=> isActive ? 'active-link' : ''}><i className="fa-solid fa-shop-lock"></i></NavLink></li>
+          <li className="header__item"><NavLink to=''/><h2 className="header__link"><i className="fa-sharp fa-solid fa-bag-shopping"></i></h2></li>
         </ul>
       </nav>
     </header>
