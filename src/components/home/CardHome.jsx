@@ -8,8 +8,11 @@ const CardHome = ({product}) => {
 
   let navigate = useNavigate()
 
-  let handleClick = () => {navigate(`/product/${product.id}`)}
+  let handleClick = () => {
+    navigate(`/product/${product.id}`)
+  }
 
+  // this function is for agg products in the cart
   let getAddCart = e => {
     e.stopPropagation()
     let URL = 'https://ecommerce-api-react.herokuapp.com/api/v1/cart'

@@ -2,6 +2,7 @@ import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import ProductDes from '../../productDet/ProductDes'
+import Similar from '../../productDet/Similar'
 
 const ProductDt = () => {
 
@@ -21,9 +22,10 @@ const ProductDt = () => {
 
   return (
     <div>
-      {
+      
         <ProductDes productInfo={productInfo}/>
-      }
+        <Similar productInfo={productInfo}/>
+      
     </div>
   )
 }

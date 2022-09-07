@@ -1,5 +1,5 @@
 import axios from 'axios'
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import getConfi from '../../utils/getConfi'
 import CartInfo from '../cart/CartInfo'
 
@@ -28,14 +28,16 @@ const Cart = () => {
       city: "USA",
       references: "Some references"
     }
-    axios.post(URL, obj, getConfi)
+    axios.post(URL, obj, getConfi())
     .then(res => {
       console.log(res.data)
-    getAllProducts()})
+      getAllProducts()
+    })
     .catch(err => console.log(err))
   }
 
-  console.log(cartProducts)
+  //console.log(cartProducts)
+
   return (
     <div className='cart'>
       {

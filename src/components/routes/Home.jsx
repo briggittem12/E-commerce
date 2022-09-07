@@ -16,6 +16,7 @@ const Home = () => {
   }, [])
   
   let products = useSelector(state => state.products)
+
   
   // Search and filter of the products
 
@@ -47,6 +48,8 @@ const Home = () => {
           .catch(err => console.log(err))
       }
   }, [searchProduct, filterCategory])
+
+
 
   //console.log(filterCategory)
 

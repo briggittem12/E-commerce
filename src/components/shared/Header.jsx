@@ -11,8 +11,8 @@ const Header = () => {
       <nav className="header__nav">
         <ul className="header__list">
           <li className="header__item"><NavLink to='/login' className={({isActive})=> isActive ? 'active-link' : ''}><i className="fa-solid fa-user"></i></NavLink></li>
-          <li className="header__item"><NavLink to='/purchase' className={({isActive})=> isActive ? 'active-link' : ''}><i className="fa-solid fa-shop-lock"></i></NavLink></li>
-          <li className="header__item"><NavLink to=''/><h2 className="header__link"><i className="fa-sharp fa-solid fa-bag-shopping"></i></h2></li>
+          <li className="header__item"><NavLink to='/purchases' className={({isActive})=> isActive ? 'active-link' : ''}><i className="fa-solid fa-shop-lock"></i></NavLink></li>
+          <li className="header__item"><NavLink to='/cart' className={({isActive})=> isActive ? 'active-link' : ''}><i className="fa-sharp fa-solid fa-bag-shopping"></i></NavLink></li>
         </ul>
       </nav>
     </header>

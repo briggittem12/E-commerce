@@ -14,10 +14,10 @@ const FormLogin = () => {
       localStorage.setItem('token', res.data.data.token)
     })
     .catch(err => console.log(err))
-    // reset({
-    //   email: '',
-    //   password: ''
-    // })
+      reset({
+        email: '',
+        password: ''
+     })
 
   }
 

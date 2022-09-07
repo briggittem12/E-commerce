@@ -1,4 +1,6 @@
+import axios from 'axios'
 import React, { useState } from 'react' 
+import getConfi from '../../utils/getConfi'
 import './styles/home.css'
 
 const ProductDes = ({productInfo}) => {
@@ -9,6 +11,19 @@ const ProductDes = ({productInfo}) => {
    let handleMin = () => {
     if(counter - 1>= 1)
     setCounter(counter - 1)
+}
+
+// this function is for agg products in the cart
+let getAddCart = e => {
+  e.stopPropagation()
+  let URL = 'https://ecommerce-api-react.herokuapp.com/api/v1/cart'
+    let obj = {
+      id: productInfo.id,
+      quantity: 1
+    }
+    axios.post(URL, obj, getConfi())
+      .then(res => console.log(res.data))
+      .catch(err => console.log(err))
 }
 
   return (
@@ -42,7 +57,7 @@ const ProductDes = ({productInfo}) => {
       </article>
       </div>
       <div className='product-cart'>
-        <button className='btn__cart'>Add to cart <i className="fa-solid fa-cart-plus"></i></button>
+        <button onClick={getAddCart} className='btn__cart'>Add to cart <i className="fa-solid fa-cart-plus"></i></button>
       </div>
       
     </section>
