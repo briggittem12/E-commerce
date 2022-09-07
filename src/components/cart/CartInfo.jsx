@@ -1,13 +1,23 @@
+import axios from 'axios'
 import React from 'react'
+import getConfi from '../../utils/getConfi'
 
-const CartInfo = () => {
+const CartInfo = ({product, getAllProducts}) => {
+
+  let deleteProduct = () => {
+    let URL = `https://ecommerce-api-react.herokuapp.com/api/v1/cart/${product.id}`
+    axios.delete(URL, getConfi)
+    .then(() => getAllProducts())
+    .catch(err => console.log(err))
+  }
+
   return (
     <article className="cart__info">
         <header className='cart__info-header'>
         <h4 className='cart__category'>Samsung</h4>
         <h3 className='cart__name'>Samdung Galaxy S22</h3>
         </header>
-        <i className="cart__trash fa-regular fa-trash-can"></i>
+        <i onClick={deleteProduct} className="cart__trash fa-regular fa-trash-can"></i>
       <span className='cart__quantity'>1</span>
       <footer className='cart__info-header'>
         <span className='cart__total-label'>Total:</span>

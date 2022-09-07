@@ -7,6 +7,8 @@ import Purchases from './components/routes/Purchases'
 import ProductDt from './components/routes/ProductDt'
 import Header from './components/shared/Header'
 import axios from 'axios'
+import PortectedRouts from './components/routes/PortectedRouts'
+import Cart from './components/routes/Cart'
 
 function App() {
   
@@ -31,8 +33,11 @@ function App() {
     <Routes>
       <Route path='/' element={<Home />} />
       <Route path='/login' element={<Login />} />
-      <Route path='/purchases' element={<Purchases />} />
       <Route path='/product/:id' element={<ProductDt/>} />
+      <Route element={<PortectedRouts/>}>
+        <Route path='/purchases' element={<Purchases />} />
+        <Route path='/cart' element={<Cart/>} />
+      </Route>
     </Routes>
     </div>
     
