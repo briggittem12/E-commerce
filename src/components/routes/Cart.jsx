@@ -6,12 +6,20 @@ import CartInfo from '../cart/CartInfo'
 const Cart = () => {
 
   const [cartProducts, setCartProducts] = useState()
+  const [totalPrice, setTotalPrice] = useState()
 
 
   let getAllProducts = () => {
     let URL = 'https://ecommerce-api-react.herokuapp.com/api/v1/cart'
     axios.get(URL, getConfi())
-    .then(res => setCartProducts(res.data.data.cart.products))
+    .then(res => {
+      let products = res.data.data.cart.products
+      setCartProducts(products)
+      let total = products.reduce((acc, cv) => {
+        return Number(cv.price) * cv.productsInCart.quantity + acc
+      }, 0)
+      setTotalPrice(total)
+    })
     .catch(err => setCartProducts())
   }
 
@@ -32,6 +40,7 @@ const Cart = () => {
     .then(res => {
       console.log(res.data)
       getAllProducts()
+      setTotalPrice(0)
     })
     .catch(err => console.log(err))
   }
@@ -39,7 +48,8 @@ const Cart = () => {
   //console.log(cartProducts)
 
   return (
-    <div className='cart'>
+    <div className='cart'> 
+    <span>Cart</span>
       {
         cartProducts?.map(product => (
           <CartInfo
@@ -51,8 +61,8 @@ const Cart = () => {
       }
       <hr />
       <footer className="cart__footer">
-        <span className="cart__total-global-label"></span>
-        <p className="cart__total-global-value"></p>
+        <span className="cart__total-global-label">Total:</span>
+        <p className="cart__total-global-value">{totalPrice}</p>
         <button onClick={handleCheckOut} className="cart__btn">Checkout</button>
       </footer>
     </div>

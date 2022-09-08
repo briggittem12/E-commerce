@@ -12,7 +12,8 @@ const CartInfo = ({product, getAllProducts}) => {
   }
 
   return (
-    <article className="cart__info">
+    <article className="cart__info"> 
+      <span>Cart vvv</span>
         <header className='cart__info-header'>
         <h4 className='cart__category'>{product.brand}</h4>
         <h3 className='cart__name'>{product.title}</h3>

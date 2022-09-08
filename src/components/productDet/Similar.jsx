@@ -19,6 +19,8 @@ const Similar = ({productInfo}) => {
 
   return (
     <div className='similar__products'>
+      <span className='similar__title'>Similar Products</span>
+      
       {
         similarProducts?.map(product => {
           if (product.title !== productInfo.title){

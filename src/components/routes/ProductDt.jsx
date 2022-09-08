@@ -1,8 +1,8 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import ProductDes from '../../productDet/ProductDes'
-import Similar from '../../productDet/Similar'
+import ProductDes from '../productDet/ProductDes'
+import Similar from '../productDet/Similar'
 
 const ProductDt = () => {
 

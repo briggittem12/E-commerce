@@ -19,7 +19,7 @@ let getAddCart = e => {
   let URL = 'https://ecommerce-api-react.herokuapp.com/api/v1/cart'
     let obj = {
       id: productInfo.id,
-      quantity: 1
+      quantity: counter
     }
     axios.post(URL, obj, getConfi())
       .then(res => console.log(res.data))
@@ -32,8 +32,8 @@ let getAddCart = e => {
       <div className='product-info__img'>
         <ul>
           <li><img className='product__img' src={productInfo?.productImgs[0]} alt=''/></li>
-          <li><img className='product__img' src={productInfo?.productImgs[1]} alt=''/></li>
-          <li><img className='product__img' src={productInfo?.productImgs[2]} alt=''/></li>
+          {/* <li><img className='product__img' src={productInfo?.productImgs[1]} alt=''/></li>
+          <li><img className='product__img' src={productInfo?.productImgs[2]} alt=''/></li> */}
         </ul>
       </div>
       <div className='product-info__data'>

@@ -5,6 +5,7 @@ import CardHome from '../home/CardHome'
 import axios from 'axios'
 import Categorys from '../searchs/Categorys'
 import Search from '../searchs/Search'
+import { useParams } from 'react-router-dom'
 
 
 const Home = () => {
@@ -19,11 +20,20 @@ const Home = () => {
 
   
   // Search and filter of the products
+  // const [filterCategory, setFilterCategory] = useState()
 
+  // let { id } = useParams()
 
+  // useEffect(() => {
+  //   let URL = `https://ecommerce-api-react.herokuapp.com/api/v1/products/${id}`
+  //     axios.get(URL)
+  //     .then(res => setFilterCategory(res.data.data.product))
+  //     .catch(err => console.log(err))
+  // }, [])
+
+/*
   const [productsComple, setProductsComple] = useState()
   const [searchProduct, setSearchProduct] = useState()
-  const [filterCategory, setFilterCategory] = useState('All')
   
 
   useEffect(() => {
@@ -48,7 +58,7 @@ const Home = () => {
           .catch(err => console.log(err))
       }
   }, [searchProduct, filterCategory])
-
+*/
 
 
   //console.log(filterCategory)
@@ -56,19 +66,18 @@ const Home = () => {
   
   return (
     <div className='home'>
-      <aside>
+     {/* <aside>
         <Categorys
-        filterCategory={filterCategory}
-        setFilterCategory={setFilterCategory}
-        searchProduct={searchProduct}
+          product={products}
+          filterCategory={filterCategory}
         />
       </aside>
-        <div className='home__search'>
+         <div className='home__search'>
             <Search
             setFilterCategory={setFilterCategory}
             searchProduct={searchProduct}
             />
-        </div>
+        </div> */}
       <div className="home__container-card">
         {
           products?.map(product => (

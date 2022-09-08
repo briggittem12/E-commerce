@@ -4,6 +4,7 @@ body {
   min-height: 100vh;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
 img {
   object-fit: contain;
   width: 100%;
@@ -11,6 +12,10 @@ img {
 }
 h1, h2, h3, h4, p {
   margin: 0;
+}
+.app {
+  display: flex;
+  flex-direction: column;
 }
 .home {
   display: flex;
@@ -25,7 +30,8 @@ h1, h2, h3, h4, p {
 }
 
 .card-home {
-  border: 1px solid rgb(110, 110, 110);
+  border: 1px solid transparent;
+  box-shadow: 0 1px 15px gray;
   overflow: hidden;
   padding: 1rem;
   width: 100%;
@@ -90,7 +96,12 @@ h1, h2, h3, h4, p {
   text-align: center;
   cursor: pointer;
 }
-@media (min-width: 750px){
+@media (min-width: 720px){
+  .card-home {
+    width: 40%;
+  }
+}
+@media (min-width: 920px){
   .card-home {
     width: 25%;
   }

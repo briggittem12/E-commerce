@@ -101,7 +101,20 @@
     
 }  */
 
-@media (min-width: 750px){
+.similar__products{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.similar__title {
+    text-align: center;
+    font-weight: bold;
+    color: brown;
+    font-size: 1.6rem;
+}
+@media (min-width: 720px){
     .product__section {
         flex-direction: row;
     }
