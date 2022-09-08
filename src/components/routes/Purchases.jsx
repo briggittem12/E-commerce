@@ -26,6 +26,7 @@ const Purchases = () => {
 
   return (
     <div className='purchase'>
+      <span className="purchase__title">Purchases</span>
        {
         purchasesInfo?.map(purchase => (
           <InfoPurchase

@@ -1,0 +1,34 @@
+.purchase {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px ;
+    flex-wrap: wrap;
+}
+.purchase__title {
+    font-size: 20px;
+    color: brown;
+    padding: .5rem 0;
+    font-weight: bold;
+}
+.card-purchase {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    border: 1px solid transparent;
+    box-shadow: 0 1px 15px gray;
+    padding: 1rem;
+    width: 300px;
+}
+.card-purchase__date {
+    font-size: 20px;
+    color: crimson;
+    padding-bottom: 5px;
+}
+.card-purchase__body {
+    list-style: none;
+}
+.card-purchase__item {
+    line-height: 25px;
+}

@@ -1,5 +1,6 @@
 import React from 'react'
 import ProductPur from './ProductPur'
+import './styles/styles.css'
 
 const InfoPurchase = ({purchase}) => {
   return (

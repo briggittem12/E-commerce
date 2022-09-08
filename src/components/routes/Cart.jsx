@@ -49,7 +49,9 @@ const Cart = () => {
 
   return (
     <div className='cart'> 
-    <span>Cart</span>
+    <span className='cart__title'>Cart</span>
+    <div className='cart__container'> 
+
       {
         cartProducts?.map(product => (
           <CartInfo
@@ -61,10 +63,13 @@ const Cart = () => {
       }
       <hr />
       <footer className="cart__footer">
-        <span className="cart__total-global-label">Total:</span>
-        <p className="cart__total-global-value">{totalPrice}</p>
+        <div className="cart__values">
+          <span className="cart__total-global-label">Total: </span>
+          <p className="cart__total-global-value">{totalPrice}</p>
+        </div>
         <button onClick={handleCheckOut} className="cart__btn">Checkout</button>
       </footer>
+    </div>
     </div>
   )
 }
